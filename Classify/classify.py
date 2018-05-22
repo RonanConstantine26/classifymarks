@@ -14,7 +14,7 @@ def getData(f):
 def thoseInRange(data, lower, upper):
     students = []
     for [number, mark] in data:
-        if lower <= mark <= upper:
+        if lower <= mark < upper:
             students.append(number)
     if len(students) is 0: students = ["none"]
     return students
@@ -31,11 +31,11 @@ def showRanges(data):
         lower=upper
 
 
-#fname = open(sys.argv[1])
-#boundaries = list(map(int, sys.argv[2:]))
+fname = open(sys.argv[1])
+boundaries = list(map(int, sys.argv[2:]))
 
-#data = getData(fname)
-#showRanges(data)
+data = getData(fname)
+showRanges(data)
 
 
 
